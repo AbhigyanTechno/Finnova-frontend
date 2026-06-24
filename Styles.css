@@ -118,9 +118,7 @@ nav.scrolled {
 .btn-nav:active { transform: translateY(0); }
 
 
-/* ===========================
-   BUTTONS
-=========================== */
+
 .btn-primary {
   background: var(--indigo);
   color: #fff;
@@ -169,9 +167,7 @@ nav.scrolled {
 }
 
 
-/* ===========================
-   HERO
-=========================== */
+
 #hero {
   min-height: 100vh;
   display: flex;
@@ -295,9 +291,7 @@ nav.scrolled {
 }
 
 
-/* ===========================
-   HERO DASHBOARD CARD
-=========================== */
+
 .hero-visual { position: relative; }
 
 .dashboard-card {
@@ -438,9 +432,7 @@ nav.scrolled {
 }
 
 
-/* ===========================
-   TRUSTED BAR
-=========================== */
+
 .trusted-bar {
   border-top: 1px solid rgba(255,255,255,0.06);
   border-bottom: 1px solid rgba(255,255,255,0.06);
@@ -479,9 +471,7 @@ nav.scrolled {
 .logo-pill:hover { color: rgba(255,255,255,0.6); }
 
 
-/* ===========================
-   SHARED SECTION STYLES
-=========================== */
+
 section { padding: 6rem 2rem; }
 
 .section-inner {
@@ -515,9 +505,7 @@ section { padding: 6rem 2rem; }
 }
 
 
-/* ===========================
-   FEATURES
-=========================== */
+/
 #features { background: var(--navy-2); }
 
 .features-grid {
@@ -589,9 +577,7 @@ section { padding: 6rem 2rem; }
 }
 
 
-/* ===========================
-   HOW IT WORKS
-=========================== */
+
 .steps-wrapper {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -645,9 +631,6 @@ section { padding: 6rem 2rem; }
 }
 
 
-/* ===========================
-   DASHBOARD PREVIEW
-=========================== */
 #preview { background: var(--navy-2); overflow: hidden; }
 
 .preview-grid {
@@ -783,10 +766,7 @@ section { padding: 6rem 2rem; }
 }
 
 
-/* ===========================
-   EDUCATION HUB
-=========================== */
-.edu-grid {
+
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
@@ -870,9 +850,7 @@ section { padding: 6rem 2rem; }
 .edu-btn:hover { gap: 8px; }
 
 
-/* ===========================
-   CTA SECTION
-=========================== */
+
 .cta-section {
   background: linear-gradient(135deg, rgba(79,110,247,0.18) 0%, rgba(62,207,178,0.1) 100%);
   border: 1px solid rgba(79,110,247,0.25);
@@ -921,9 +899,7 @@ section { padding: 6rem 2rem; }
 .cta-byline strong { color: var(--indigo-light); }
 
 
-/* ===========================
-   FOOTER
-=========================== */
+
 footer {
   border-top: 1px solid rgba(255,255,255,0.07);
   padding: 3rem 2rem;
@@ -972,9 +948,6 @@ footer {
 }
 
 
-/* ===========================
-   TOAST NOTIFICATIONS
-=========================== */
 #toast-container {
   position: fixed;
   bottom: 1.5rem;
@@ -1011,9 +984,7 @@ footer {
 }
 
 
-/* ===========================
-   LOADING STATE
-=========================== */
+
 .skeleton {
   background: linear-gradient(90deg, var(--navy-3) 25%, var(--navy-2) 50%, var(--navy-3) 75%);
   background-size: 200% 100%;
@@ -1027,9 +998,7 @@ footer {
 }
 
 
-/* ===========================
-   REVEAL ANIMATIONS
-=========================== */
+
 .reveal {
   opacity: 0;
   transform: translateY(28px);
@@ -1047,9 +1016,6 @@ footer {
 .reveal-delay-4 { transition-delay: 0.4s; }
 
 
-/* ===========================
-   RESPONSIVE
-=========================== */
 @media (max-width: 900px) {
   .hero-content        { grid-template-columns: 1fr; gap: 3rem; }
   .hero-visual         { display: none; }
