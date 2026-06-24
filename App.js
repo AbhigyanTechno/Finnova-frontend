@@ -1,5 +1,5 @@
 /*
-  =====================================================================
+  
   PocketWise · app.js
   Finnova — Frontend by: [Your Name]
 
@@ -8,7 +8,7 @@
 
   API_BASE is the only variable you need to change when your backend
   is deployed. Everything else wires up automatically.
-  =====================================================================
+  
 */
 
 const API_BASE = "http://localhost:5000/api"; // TODO: replace with your deployed backend URL
