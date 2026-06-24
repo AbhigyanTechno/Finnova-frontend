@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PocketWise – AI-Powered Student Finance | Finnova</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div id="toast-container"></div>
+
+<nav id="navbar">
+  <div class="nav-logo">Pocket<span>Wise</span><span class="dot">.</span></div>
+  <div class="nav-links">
+    <a href="#features">Features</a>
+    <a href="#how">How it works</a>
+    <a href="#preview">Dashboard</a>
+    <a href="#edu">Learn</a>
+    <button class="btn-nav" id="nav-cta-btn">Get Started →</button>
+  </div>
+</nav>
+
+
+<!-- ==================== HERO ==================== -->
+<section id="hero">
+  <div class="hero-bg-glow"></div>
+  <div class="hero-bg-glow-2"></div>
+
+  <div class="hero-content">
+    <div>
+      <div class="hero-eyebrow">
+        <div class="pulse"></div>
+        Now in beta · Free for students
+      </div>
+
+      <h1 class="hero-headline">
+        Your money,<br>
+        finally <span class="accent">under</span><br>
+        <span class="accent-mint">control.</span>
+      </h1>
+
+      <p class="hero-sub">
+        PocketWise helps college students track every rupee, stick to budgets,
+        build savings — and actually understand money. Built for the way you live.
+      </p>
+
+      <div class="hero-cta-row">
+        <a href="#" class="btn-primary">Start for free</a>
+        <a href="#preview" class="btn-ghost">
+          See dashboard
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-num"><span class="counter" data-target="5">0</span>+ modules</span>
+          <span class="stat-label">Built for MVP</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">₹<span class="counter" data-target="0">0</span> cost</span>
+          <span class="stat-label">Always free for students</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num"><span class="counter" data-target="100">0</span>% private</span>
+          <span class="stat-label">Your data stays yours</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div style="position:relative;padding:1.5rem;">
+        <div class="dashboard-card">
+          <div class="card-header">
+            <span class="card-title">Monthly Overview</span>
+            <span class="card-badge" id="hero-savings-badge">↑ Loading…</span>
+          </div>
+
+          <svg width="100%" viewBox="0 0 320 120" xmlns="http://www.w3.org/2000/svg" style="display:block;">
+            <defs>
+              <linearGradient id="lineGrad" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stop-color="#4F6EF7"/>
+                <stop offset="100%" stop-color="#3ECFB2"/>
+              </linearGradient>
+              <linearGradient id="fillGrad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#4F6EF7" stop-opacity="0.25"/>
+                <stop offset="100%" stop-color="#4F6EF7" stop-opacity="0"/>
+              </linearGradient>
+            </defs>
+            <line x1="0" y1="30" x2="320" y2="30" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+            <line x1="0" y1="60" x2="320" y2="60" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+            <line x1="0" y1="90" x2="320" y2="90" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+            <path id="spend-fill"
+              d="M0 90 C40 90 60 70 80 65 C100 60 120 75 140 58 C160 40 180 55 200 42 C220 30 240 48 260 38 C280 28 300 35 320 30 L320 110 L0 110 Z"
+              fill="url(#fillGrad)"/>
+            <path id="spend-path"
+              d="M0 90 C40 90 60 70 80 65 C100 60 120 75 140 58 C160 40 180 55 200 42 C220 30 240 48 260 38 C280 28 300 35 320 30"
+              fill="none"
+              stroke="url(#lineGrad)"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"/>
+            <circle cx="320" cy="30" r="4" fill="#3ECFB2" opacity="0">
+              <animate attributeName="opacity" values="0;1" dur="0.3s" begin="2.9s" fill="freeze"/>
+            </circle>
+            <text x="0"   y="116" fill="#8892A4" font-size="9" font-family="Inter">Aug</text>
+            <text x="58"  y="116" fill="#8892A4" font-size="9" font-family="Inter">Sep</text>
+            <text x="116" y="116" fill="#8892A4" font-size="9" font-family="Inter">Oct</text>
+            <text x="174" y="116" fill="#8892A4" font-size="9" font-family="Inter">Nov</text>
+            <text x="232" y="116" fill="#8892A4" font-size="9" font-family="Inter">Dec</text>
+            <text x="290" y="116" fill="#8892A4" font-size="9" font-family="Inter">Jan</text>
+          </svg>
+
+          <div class="balance-row">
+            <div>
+              <div class="balance-label">Remaining balance</div>
+              <div class="balance-val" id="hero-balance">—</div>
+            </div>
+            <div style="text-align:right;">
+              <div class="balance-label">Spent this month</div>
+              <div class="balance-val" id="hero-spent" style="color:var(--indigo-light);">—</div>
+            </div>
+          </div>
+
+          <div class="budget-section" id="hero-budget-bars">
+            <div class="budget-row">
+              <span>Loading budget…</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mini-card mini-card-1">
+          <div class="mini-label">🎯 Savings goal</div>
+          <div class="mini-val" id="mini-savings-goal">—</div>
+        </div>
+        <div class="mini-card mini-card-2">
+          <div class="mini-label">⚡ Streak</div>
+          <div class="mini-val" id="mini-streak">—</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ==================== TRUSTED BAR ==================== -->
+<div class="trusted-bar">
+  <span class="trusted-label">Trusted by students at</span>
+  <div class="trusted-logos">
+    <span class="logo-pill">IIT Delhi</span>
+    <span class="logo-pill">BITS Pilani</span>
+    <span class="logo-pill">DU Colleges</span>
+    <span class="logo-pill">VIT Vellore</span>
+    <span class="logo-pill">Manipal University</span>
+  </div>
+</div>
+
+
+<!-- ==================== FEATURES ==================== -->
+<section id="features">
+  <div class="section-inner">
+    <p class="section-eyebrow reveal">Everything you need</p>
+    <h2 class="section-headline reveal reveal-delay-1">Built around the way<br>students actually spend</h2>
+    <p class="section-sub reveal reveal-delay-2">
+      Five powerful modules, zero financial jargon. PocketWise meets you where you are
+      and helps you go further.
+    </p>
+
+    <div class="features-grid">
+      <div class="feature-card reveal">
+        <div class="feature-icon" style="background:rgba(79,110,247,0.15);">🔐</div>
+        <div class="feature-title">Secure Authentication</div>
+        <div class="feature-desc">
+          Sign up in seconds. Your financial data is protected with secure login
+          and profile management — only you can see your numbers.
+        </div>
+        <span class="feature-tag" style="background:rgba(79,110,247,0.12);color:var(--indigo-light);">Phase 1</span>
+      </div>
+
+      <div class="feature-card reveal reveal-delay-1">
+        <div class="feature-icon" style="background:rgba(62,207,178,0.15);">📊</div>
+        <div class="feature-title">Expense Tracking</div>
+        <div class="feature-desc">
+          Log every chai, auto ride, and textbook. Categorize transactions, browse
+          history, and see exactly where your money goes each month.
+        </div>
+        <span class="feature-tag" style="background:rgba(62,207,178,0.12);color:var(--mint);">Phase 1</span>
+      </div>
+
+      <div class="feature-card reveal reveal-delay-2">
+        <div class="feature-icon" style="background:rgba(124,92,191,0.15);">🗓️</div>
+        <div class="feature-title">Budget Planner</div>
+        <div class="feature-desc">
+          Set monthly limits by category, watch your budget in real time, and get
+          alerts before you overshoot. Financial discipline made simple.
+        </div>
+        <span class="feature-tag" style="background:rgba(124,92,191,0.12);color:#c4b5fd;">Phase 1</span>
+      </div>
+
+      <div class="feature-card reveal reveal-delay-1">
+        <div class="feature-icon" style="background:rgba(251,191,36,0.15);">📈</div>
+        <div class="feature-title">Financial Dashboard</div>
+        <div class="feature-desc">
+          One screen to rule them all. Income, expenses, savings, and monthly
+          reports — your complete financial health at a glance.
+        </div>
+        <span class="feature-tag" style="background:rgba(251,191,36,0.12);color:#fbbf24;">Phase 1</span>
+      </div>
+
+      <div class="feature-card reveal reveal-delay-2">
+        <div class="feature-icon" style="background:rgba(248,113,113,0.15);">🎓</div>
+        <div class="feature-title">Education Hub</div>
+        <div class="feature-desc">
+          Budgeting lessons, saving tips, financial literacy articles, and quizzes.
+          Because managing money is a skill — and skills can be learned.
+        </div>
+        <span class="feature-tag" style="background:rgba(248,113,113,0.12);color:#f87171;">Phase 1</span>
+      </div>
+
+      <div class="feature-card reveal reveal-delay-3" style="border-style:dashed;opacity:0.7;">
+        <div class="feature-icon" style="background:rgba(79,110,247,0.1);">🤖</div>
+        <div class="feature-title">AI Assistant · Coming soon</div>
+        <div class="feature-desc">
+          Personalized spending analysis, saving recommendations, and a financial
+          Q&amp;A bot that knows your situation. Powered by Finnova AI.
+        </div>
+        <span class="feature-tag" style="background:rgba(79,110,247,0.08);color:var(--muted);">Phase 2</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ==================== HOW IT WORKS ==================== -->
+<section id="how">
+  <div class="section-inner">
+    <p class="section-eyebrow reveal">Simple by design</p>
+    <h2 class="section-headline reveal reveal-delay-1">From sign-up to<br>savings in 4 steps</h2>
+
+    <div class="steps-wrapper">
+      <div class="step-item reveal">
+        <div class="step-num">01</div>
+        <div class="step-title">Create your account</div>
+        <div class="step-desc">
+          Sign up with your college email. Set up your profile and monthly pocket
+          money in under two minutes.
+        </div>
+      </div>
+      <div class="step-item reveal reveal-delay-1">
+        <div class="step-num">02</div>
+        <div class="step-title">Set your budget</div>
+        <div class="step-desc">
+          Allocate spending limits across food, transport, books, and fun —
+          tailored to your actual lifestyle.
+        </div>
+      </div>
+      <div class="step-item reveal reveal-delay-2">
+        <div class="step-num">03</div>
+        <div class="step-title">Track as you spend</div>
+        <div class="step-desc">
+          Log expenses on the go. Get instant alerts when you're near your limit.
+          Never be surprised at month-end again.
+        </div>
+      </div>
+      <div class="step-item reveal reveal-delay-3">
+        <div class="step-num">04</div>
+        <div class="step-title">Grow your habits</div>
+        <div class="step-desc">
+          Review monthly reports, learn from the Education Hub, and watch your
+          savings grow — one smart decision at a time.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ==================== DASHBOARD PREVIEW ==================== -->
+<section id="preview">
+  <div class="section-inner">
+    <div class="preview-grid">
+      <div class="reveal">
+        <p class="section-eyebrow">Live dashboard</p>
+        <h2 class="section-headline">Everything visible,<br>nothing hidden.</h2>
+        <p class="section-sub" style="margin-bottom:2.5rem;">
+          Your financial dashboard gives you a full picture: totals, trends,
+          per-category breakdowns, and savings progress — updated as you log.
+        </p>
+
+        <div class="preview-features">
+          <div class="pf-item">
+            <div class="pf-icon-wrap" style="background:rgba(79,110,247,0.15);">💰</div>
+            <div>
+              <div class="pf-text-title">Income &amp; balance summary</div>
+              <div class="pf-text-desc">
+                See total income, total spent, and remaining balance at a glance —
+                no mental math required.
+              </div>
+            </div>
+          </div>
+          <div class="pf-item">
+            <div class="pf-icon-wrap" style="background:rgba(62,207,178,0.15);">📉</div>
+            <div>
+              <div class="pf-text-title">Category-wise breakdown</div>
+              <div class="pf-text-desc">
+                Food, transport, books, entertainment — instantly see which category
+                is eating your budget.
+              </div>
+            </div>
+          </div>
+          <div class="pf-item">
+            <div class="pf-icon-wrap" style="background:rgba(251,191,36,0.15);">🏆</div>
+            <div>
+              <div class="pf-text-title">Monthly reports</div>
+              <div class="pf-text-desc">
+                End-of-month summaries and performance insights help you improve
+                every 30 days.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal reveal-delay-1">
+        <div class="dash-preview">
+          <div class="dash-top">
+            <div class="dash-metric">
+              <div class="dm-label">Total Income</div>
+              <div class="dm-val green" id="dm-income">—</div>
+            </div>
+            <div class="dash-metric">
+              <div class="dm-label">Total Spent</div>
+              <div class="dm-val red" id="dm-spent">—</div>
+            </div>
+            <div class="dash-metric">
+              <div class="dm-label">Saved</div>
+              <div class="dm-val purple" id="dm-saved">—</div>
+            </div>
+          </div>
+
+          <div class="dash-chart-area">
+            <div class="dash-chart-label">Spending by category this month</div>
+            <div id="category-bars">
+              <div class="cat-row">
+                <span class="cat-name" style="color:var(--muted);font-size:0.8rem;">Loading…</span>
+              </div>
+            </div>
+          </div>
+
+          <div style="background:var(--navy-2);border-radius:14px;padding:1rem 1.2rem;border:1px solid rgba(62,207,178,0.15);">
+            <div style="display:flex;justify-content:space-between;margin-bottom:0.5rem;">
+              <span style="font-size:0.75rem;color:var(--muted);">Savings goal progress</span>
+              <span style="font-size:0.75rem;color:var(--mint);font-weight:600;" id="savings-goal-text">—</span>
+            </div>
+            <div class="bar-track" style="height:8px;">
+              <div class="bar-fill" id="savings-goal-bar" style="width:0%;background:linear-gradient(to right,#3ECFB2,#4F6EF7);"></div>
+            </div>
+            <div style="font-size:0.7rem;color:var(--muted);margin-top:0.4rem;" id="savings-goal-label">
+              Connect your account to see progress
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ==================== EDUCATION HUB ==================== -->
+<section id="edu" style="background:var(--navy-2);">
+  <div class="section-inner">
+    <p class="section-eyebrow reveal">Financial Education Hub</p>
+    <h2 class="section-headline reveal reveal-delay-1">Money skills they<br>never taught in class.</h2>
+    <p class="section-sub reveal reveal-delay-2">
+      Bite-sized lessons, real-world tips, and quick quizzes — because financial
+      literacy is the highest-ROI skill a student can develop.
+    </p>
+
+    <div class="edu-grid" id="edu-grid">
+      <div class="edu-card reveal">
+        <div class="edu-banner" style="background:linear-gradient(135deg,rgba(79,110,247,0.25),rgba(124,92,191,0.25));">💡</div>
+        <div class="edu-body">
+          <span class="edu-tag" style="background:rgba(79,110,247,0.12);color:var(--indigo-light);">Lesson</span>
+          <div class="edu-title">The 50/30/20 Rule — A Budget That Actually Works</div>
+          <div class="edu-desc">
+            Learn how to split your income across needs, wants, and savings using
+            this simple but powerful framework.
+          </div>
+          <div class="edu-footer">
+            <span class="edu-read">5 min read</span>
+            <button class="edu-btn" onclick="openArticle('budgeting-50-30-20')">Read →</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="edu-card reveal reveal-delay-1">
+        <div class="edu-banner" style="background:linear-gradient(135deg,rgba(62,207,178,0.2),rgba(79,110,247,0.2));">📈</div>
+        <div class="edu-body">
+          <span class="edu-tag" style="background:rgba(62,207,178,0.12);color:var(--mint);">Saving Tips</span>
+          <div class="edu-title">7 Micro-Saving Habits That Add Up to Thousands</div>
+          <div class="edu-desc">
+            Small daily choices that compound into serious savings — without feeling
+            like you're sacrificing anything.
+          </div>
+          <div class="edu-footer">
+            <span class="edu-read">4 min read</span>
+            <button class="edu-btn" onclick="openArticle('micro-savings')">Read →</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="edu-card reveal reveal-delay-2">
+        <div class="edu-banner" style="background:linear-gradient(135deg,rgba(251,191,36,0.2),rgba(248,113,113,0.2));">🧠</div>
+        <div class="edu-body">
+          <span class="edu-tag" style="background:rgba(251,191,36,0.12);color:#fbbf24;">Quiz</span>
+          <div class="edu-title">How financially literate are you? Take the 5-min quiz</div>
+          <div class="edu-desc">
+            Test your knowledge on budgeting, saving, UPI safety, and interest rates.
+            Get a personalized score and next steps.
+          </div>
+          <div class="edu-footer">
+            <span class="edu-read">5 questions</span>
+            <button class="edu-btn" onclick="openArticle('fin-literacy-quiz')">Start quiz →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ==================== CTA ==================== -->
+<section style="background:var(--navy);">
+  <div class="section-inner">
+    <div class="cta-section reveal">
+      <div class="hero-eyebrow" style="margin:0 auto 1.5rem;width:fit-content;">
+        <div class="pulse"></div>
+        Free for all students · No credit card
+      </div>
+      <h2 class="cta-headline">Ready to take control<br>of your money?</h2>
+      <p class="cta-sub">Join PocketWise. Track your first expense today. Future-you will be grateful.</p>
+      <div class="cta-btn-row">
+        <a href="#" class="btn-primary" style="font-size:1rem;padding:1rem 2.5rem;">Create free account</a>
+        <a href="#features" class="btn-ghost" style="font-size:1rem;padding:1rem 2rem;">Explore features</a>
+      </div>
+      <p class="cta-byline">A product by <strong>Finnova</strong> · Built for students, by students</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ==================== FOOTER ==================== -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo">Pocket<span>Wise</span><span class="dot-mint">.</span></div>
+      <div class="footer-company">A Finnova product · © 2025 All rights reserved</div>
+    </div>
+    <div class="footer-links">
+      <a href="#">About</a>
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Contact</a>
+    </div>
+    <div class="footer-copy">Built with ♥ for students who want more from their money.</div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
